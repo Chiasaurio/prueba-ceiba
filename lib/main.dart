@@ -1,3 +1,4 @@
+import 'package:ceiba_prueba/Home/postCubit/post_cubit.dart';
 import 'package:ceiba_prueba/Home/ui/home_screen.dart';
 import 'package:ceiba_prueba/constants.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<HomeCubit>(create: (context) => HomeCubit()),
+        BlocProvider<PostCubit>(create: (context) => PostCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

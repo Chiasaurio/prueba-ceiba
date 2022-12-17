@@ -1,10 +1,8 @@
 import 'package:ceiba_prueba/Home/ui/components/user_list.dart';
-import 'package:ceiba_prueba/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../models/user_model.dart';
 import 'components/search_bar.dart';
-import 'components/user_information.dart';
 
 class Body extends StatefulWidget {
   final List<UserModel> users;
