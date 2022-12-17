@@ -26,10 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Prueba de ingreso'),
         backgroundColor: kGreenColor,
       ),
-      body: BlocBuilder<HomeCubit, HomeState>(
+      body: BlocBuilder<HomeCubit, HomeUsersState>(
         builder: (context, state) {
-          if (state is HomeUsersLoaded) {
-            return Body(users: state.users);
+          if (state.users != null) {
+            return Body(
+                users: state.filtered ? state.usersFiltered! : state.users!);
           } else {
             return const Center(
               child: CircularProgressIndicator(),

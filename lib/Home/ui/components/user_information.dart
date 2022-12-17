@@ -10,7 +10,7 @@ class UserInformationComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+      margin: const EdgeInsets.symmetric(vertical: 20),
       child: Material(
         elevation: 2,
         child: Container(
@@ -33,7 +33,13 @@ class UserInformationComponent extends StatelessWidget {
                     color: kTextGreenColor,
                     size: 15,
                   ),
-                  Text(' ${user.phone}')
+                  Text(
+                    ' ${user.phone}',
+                    style: const TextStyle(
+                      color: kTextGreenColor,
+                      fontSize: 12,
+                    ),
+                  )
                 ],
               ),
               Row(

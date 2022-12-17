@@ -1,4 +1,5 @@
 import 'package:ceiba_prueba/Home/ui/home_screen.dart';
+import 'package:ceiba_prueba/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,6 +21,11 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+          textSelectionTheme: const TextSelectionThemeData(
+            cursorColor: kGreenColor,
+            selectionColor: kGreenColor,
+            selectionHandleColor: kGreenColor,
+          ),
           primarySwatch: Colors.blue,
         ),
         home: const HomeScreen(),
